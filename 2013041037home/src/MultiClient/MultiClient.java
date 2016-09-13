@@ -5,7 +5,7 @@ import java.awt.event.*;
 import java.io.*;
 import java.net.*;
 import javax.swing.*;
-
+import java.util.Scanner;
 public class MultiClient implements ActionListener, Runnable {
 	// 멤버 변수 정의
 	private Socket socket; // 소켓
@@ -21,7 +21,10 @@ public class MultiClient implements ActionListener, Runnable {
 	private JButton jbtn; // 종료 버튼 준비
 
 	public static void main(String[] args) {
-		MultiClient cc = new MultiClient("127.0.0.1", "bs"); // <- 직접 실행할 경우.
+		System.out.println("대화명입력:");
+		Scanner sc = new Scanner(System.in);
+		String id=sc.nextLine();  
+		MultiClient cc = new MultiClient("127.0.0.1", id); // <- 직접 실행할 경우.
 		cc.init(); // 쓰레드 관련 코드 실행
 	}// main
 	
