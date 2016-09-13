@@ -112,7 +112,7 @@ public class MultiClient implements ActionListener, Runnable {
 
 	public void init() {
 		try {
-			socket = new Socket(ip, 5000);
+			socket = new Socket(ip, 9000);
 			System.out.println("서버에 접속되었습니다... 주인님^^");
 			oos = new ObjectOutputStream(socket.getOutputStream());
 			ois = new ObjectInputStream(socket.getInputStream());
