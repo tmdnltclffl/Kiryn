@@ -29,7 +29,6 @@ public class Server {
 			pw = new PrintWriter(soc.getOutputStream());
 			
 			String readData = "";
-			
 			while(!(readData=br.readLine()).equals(null));{
 				System.out.println("from Client >"+readData);
 				pw.println(readData);
