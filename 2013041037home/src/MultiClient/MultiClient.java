@@ -23,14 +23,14 @@ public class MultiClient implements ActionListener, Runnable {
 	public static void main(String[] args) {
 		System.out.println("대화명입력:");
 		Scanner sc = new Scanner(System.in);
-		String id=sc.nextLine();  
-		MultiClient cc = new MultiClient("127.0.0.1", id); // <- 직접 실행할 경우.
+		String id=sc.nextLine();
+		MultiClient cc = new MultiClient("127.0.0.1"); // <- 직접 실행할 경우.
 		cc.init(); // 쓰레드 관련 코드 실행
 	}// main
 	
-	public MultiClient(String argIp, String argId) {
+	public MultiClient(String argIp) {
 		ip = argIp; // IP 주소
-		id = argId; // 대화명
+	
 		
 		jframe = new JFrame("멀티 채팅 ver 1.0");
 		// 아래에 붙는 판넬 코드
