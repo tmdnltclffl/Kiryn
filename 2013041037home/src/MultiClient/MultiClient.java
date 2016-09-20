@@ -24,7 +24,7 @@ public class MultiClient implements ActionListener, Runnable {
 		System.out.println("대화명입력:");
 		Scanner sc = new Scanner(System.in);
 		String id=sc.nextLine();
-		MultiClient cc = new MultiClient("127.0.0.1"); // <- 직접 실행할 경우.
+		MultiClient cc = new MultiClient("192.168.25.2"); // <- 직접 실행할 경우.
 		cc.init(); // 쓰레드 관련 코드 실행
 	}// main
 	
