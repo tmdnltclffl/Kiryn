@@ -21,16 +21,15 @@ public class MultiClient implements ActionListener, Runnable {
 	private JButton jbtn; // 종료 버튼 준비
 
 	public static void main(String[] args) {
-		System.out.println("대화명입력:");
-		Scanner sc = new Scanner(System.in);
-		String id=sc.nextLine();
-		MultiClient cc = new MultiClient("192.168.25.2"); // <- 직접 실행할 경우.
+
+		MultiClient cc = new MultiClient("192.168.1.50","박경훈"); // <- 직접 실행할 경우.
 		cc.init(); // 쓰레드 관련 코드 실행
 	}// main
 	
-	public MultiClient(String argIp) {
+	public MultiClient(String argIp,String argId) {
 		ip = argIp; // IP 주소
-	
+
+		id=argId;
 		
 		jframe = new JFrame("멀티 채팅 ver 1.0");
 		// 아래에 붙는 판넬 코드
